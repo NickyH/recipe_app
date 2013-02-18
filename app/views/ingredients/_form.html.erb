@@ -1,0 +1,11 @@
+<%= form_for @ingredient do |f| %>
+
+<%= f.label :name, "Ingredient Name", :autofocus => 'autofocus' %>
+<%= f.text_field :name %>
+<%= f.label :units %>
+<%= f.text_field :units  %>
+<%= f.label :cost_per_unit, 'Unit cost' %>
+<%= f.text_field :cost_per_unit %>
+<%= f.submit %>
+<% end %>
+

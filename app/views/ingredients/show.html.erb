@@ -1,0 +1,8 @@
+<h4><%= @ingredient.name %></h4><hr/>
+  <%= @ingredient.units %>
+  <%= @ingredient.cost_per_unit %>
+  <%= link_to 'Delete', @ingredient, :method => :delete %>
+  <%= link_to 'Edit', edit_ingredient_path(@ingredient), :method => :get %>
+<div class="row">
+  <div class="one column">
+</div>

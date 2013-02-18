@@ -1,0 +1,14 @@
+
+              <h4><%= @tutorial.name %></h4><hr/>
+
+                <%= @tutorial.name %>
+                <%= @tutorial.description %>
+                <% videolink = "http://www.youtube.com/embed/#{@tutorial.video}" %>
+                <iframe width="210" height="157.5" src="<%= videolink %>" frameborder="0"></iframe>
+                <%= link_to 'Delete', @tutorial, :method => :delete %>
+                <%= link_to 'Edit', edit_tutorial_path(@tutorial), :method => :get %>
+              <div class="row">
+                <div class="one column">
+
+                </div>
+

@@ -1,0 +1,89 @@
+@import url(http://fonts.googleapis.com/css?family=Molle:400italic);
+@import url(http://fonts.googleapis.com/css?family=Petit+Formal+Script);
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One);
+
+.top-bar
+{
+  background-color: #47D9BF;
+  height: 150px;
+}
+
+.top-bar ul li
+{
+
+}
+
+.top-bar .name
+{
+  color: #F2D03B;
+  width: 100px;
+}
+
+}
+
+.cheesecake
+{
+  margin: 0 0 0 20px;
+  padding: 0 0 0 0;
+}
+
+.cheesecake a
+{
+  display: inline-block;
+  font-family: 'Julius Sans One', sans-serif;
+  color: #F2D03B;
+  font-size: 50px;
+}
+
+
+.love
+{
+  height: 50px;
+  margin: 0 0 0 20px;
+  padding: 0 0 0 0;
+
+}
+
+.love a
+{
+  display: inline-block;
+  font-family: 'Petit Formal Script', cursive;
+  font-size: 50px;
+}
+
+h1 .form-new
+{
+  margin-left: 50px;
+}
+
+.form-input
+{
+  margin-left: 50px;
+  list-style: none;
+  width: 80%;
+}
+
+div .form-input
+{
+  margin-left: 50px;
+  display: inline-block;
+  width: 50%;
+}
+
+label
+{
+  display: inline-block;
+  width: 30%;
+  line-height: 50px;
+}
+
+div .panel .ingredients
+{
+  height: 100px;
+  width: 150px;
+}
+
+.new-width .four .mobile-four .columns
+{
+
+}

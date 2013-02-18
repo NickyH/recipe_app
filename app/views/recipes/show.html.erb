@@ -1,0 +1,72 @@
+<div class="row">
+  <div class="twelve columns">
+    <div class="row">
+      <div class="twelve columns show-for-small">
+        <img src="http://placehold.it/1200x700&text=Mobile Header">
+      </div>
+    </div><br>
+    <div class="row">
+      <div class="twelve columns">
+        <div class="row">
+          <div class="four mobile-four columns showpanel">
+            <h4></h4><hr/>
+              <div class="panel">
+                <h5></h5>
+                <h6 class="subheader">
+                <h4><%= @recipe.title %></h4><hr/>
+                <%= @recipe.key_ingredient %>
+                <br>
+                <%= @recipe.preptime %>
+                <br>
+                <%= @recipe.cooktime %>
+                <br>
+
+                <% @tutorials.each do |tutorial| %>
+                <% string = @recipe.instructions %>
+                <% string.split(' ').map do |word| %>
+                    <% if word == 'base' %>
+                    <%= link_to "#{tutorial.name}", tutorial_path(tutorial.id) %>
+
+                  <% else %>
+                  <%= word %>
+                  <% end %>
+                  <% end %>
+                  <% end %>
+
+                <%= @recipe.instructions %>
+
+
+                <br>
+                <%= @recipe.servings %>
+                <br>
+                <%= link_to 'Delete', @recipe, :method => :delete %>
+                <%= link_to 'Edit', edit_recipe_path(@recipe), :method => :get %>
+                  <div class="row">
+                    <div class="one column">
+                    <%= image_tag(@recipe.image) %>
+                    </div>
+
+<% @recipe.ingredients.each do |ingredient| %>
+<br>
+
+<%= @recipe.items %>
+<% end %>
+
+<% Ingredient.order(:name).each do |ingredient| %>
+  <span><%= ingredient.name %></span>
+  <%= check_box_tag 'recipe[ingredient_ids][]', ingredient.id, ingredient.in?(@recipe.ingredients.to_a) %>
+<% end %>
+
+  <br>
+
+
+
+
+
+                  </div>
+              </div>
+              <div class="four mobile-two pull-two-mobile columns">
+              </div>
+            </div>
+          </div>
+        </div>

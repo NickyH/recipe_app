@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Cheesecake</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+</head>
+
+</head>
+<body>
+
+    <!-- Navigation -->
+
+  <nav class="top-bar">
+    <ul>
+      <li class="name"><h1 class='love'><%= link_to 'Cheesecake', root_path %></h1>
+        <h1 class='cheesecake'><%= link_to 'Place', root_path %></h1></li>
+      <li class="toggle-topbar"><a href="#"></a></li>
+    </ul>
+
+    <section>
+      <ul class="left">
+        <li><%= link_to 'Recipes', recipes_path %></li>
+        <li><%= link_to 'Ingredients', ingredients_path %></li>
+        <li><%= link_to 'Tutorials', tutorials_path %></li>
+      </ul>
+
+      <ul class="right">
+        <li class="has-dropdown">
+          <a href="#">More</a>
+
+          <ul class="dropdown">
+            <li><%= link_to 'Add Recipe', new_recipe_path %></li>
+            <li><%= link_to 'Add Ingredient', new_ingredient_path %></li>
+            <li><%= link_to 'Add Tutorial', new_tutorial_path %></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </nav>
+
+    <%= yield %>
+
+
+      <footer class="row">
+        <div class="twelve columns"><hr />
+            <div class="row">
+
+              <div class="six columns">
+                  <p>&copy; Nicky Hughes Rails App.</p>
+              </div>
+
+              <div class="six columns">
+                  <ul class="link-list right">
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">About </a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+              </div>
+
+            </div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+</body>
+</html>

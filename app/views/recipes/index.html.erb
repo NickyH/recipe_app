@@ -1,0 +1,64 @@
+ <div class="row">
+    <div class="twelve columns">
+
+    <!-- Mobile Header -->
+
+      <div class="row">
+        <div class="twelve columns show-for-small">
+
+          <img src="http://placehold.it/1200x700&text=Mobile Header">
+
+        </div>
+      </div><br>
+
+    <!-- End Mobile Header -->
+
+
+      <div class="row">
+        <div class="twelve columns">
+          <div class="row">
+
+    <!-- Shows -->
+
+               <div class="four mobile-four columns">
+
+              <h4>View All Recipes</h4><hr/>
+              <% @recipes.each do |recipe| %>
+              <div class="panel">
+                <h5><%= link_to "#{recipe.title}", recipe_path(recipe.id) %></h5>
+
+
+                <h6 class="subheader">
+                  Prep Time: <%= recipe.preptime %>
+                  <br>Cooktime Time: <%= recipe.cooktime %>
+                  <br>Servings: <%= recipe.servings %>
+                  <br>Cost: <%= %>
+                </h6>
+
+                <h6><%= link_to 'Read More >>', recipe_path(recipe.id) %></h6>
+                <%= image_tag(recipe.image) %>
+              </div>
+
+<% end %>
+            </div>
+
+
+              <h4>Select by key ingredient</h4><hr/>
+              <% @recipes.each do |recipe| %>
+                <h5><%= link_to "#{recipe.key_ingredient}" %></h5>
+                <% end %>
+
+
+
+            <div class="four mobile-two pull-two-mobile columns">
+
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+    <!-- End Content -->
+
