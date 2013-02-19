@@ -1,24 +1,88 @@
 @import url(http://fonts.googleapis.com/css?family=Molle:400italic);
 @import url(http://fonts.googleapis.com/css?family=Petit+Formal+Script);
 @import url(http://fonts.googleapis.com/css?family=Julius+Sans+One);
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url(http://fonts.googleapis.com/css?family=Archivo+Black);
 
 .top-bar
 {
   background-color: #47D9BF;
-  height: 150px;
+  height: 120px;
+}
+
+div.recipezy
+{
+  display: inline-block;
+  width: 200px;
+  margin: 10px 50px auto 50px;
+}
+
+h5.homepagetext
+{
+  display: inline-block;
+}
+
+.recipezy img
+{
+  opacity: 05;
+}
+
+nav.top-bar a
+{
+  color: red;
+}
+
+a
+{
+  color: #198CBF;
+}
+
+h4
+{
+  color: #26BF83;
+}
+
+h4.formtitle
+{
+  margin-left: 50px;
 }
 
 .top-bar ul li
 {
-
+  line-height:50px;
+  font-size: 30px;
 }
 
-.top-bar .name
+.top-bar.name
 {
   color: #F2D03B;
-  width: 100px;
+  width: 300px;
+  font-size: 30px;
 }
 
+li.toplinks
+{
+  font-size: 30px;
+}
+
+li.name a
+{
+  color: #FF4C45;
+}
+
+.top-bar ul > li a:not(.button)
+{
+  font-size: 25px;
+  font-family: 'Ubuntu', sans-serif;
+  float: left;
+  color: white;
+}
+
+.top-bar ul li.name
+{
+  font-size: 30px;
+  color: red;
 }
 
 .cheesecake
@@ -30,11 +94,9 @@
 .cheesecake a
 {
   display: inline-block;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   color: #F2D03B;
-  font-size: 50px;
 }
-
 
 .love
 {
@@ -48,10 +110,11 @@
 {
   display: inline-block;
   font-family: 'Petit Formal Script', cursive;
-  font-size: 50px;
+  font-size: 30px;
+  height: 30px;
 }
 
-h1 .form-new
+h1.form-new
 {
   margin-left: 50px;
 }
@@ -60,30 +123,264 @@ h1 .form-new
 {
   margin-left: 50px;
   list-style: none;
-  width: 80%;
+  width: 100%;
 }
 
-div .form-input
+div.form-input
 {
   margin-left: 50px;
   display: inline-block;
   width: 50%;
 }
 
+div.form-input.dropdown
+{
+  margin-left: 50px;
+  display: inline-block;
+  width: 300px;
+}
+
+div.form-input.short
+{
+  margin-left: 50px;
+  display: inline-block;
+  width: 100px;
+}
+
 label
 {
   display: inline-block;
-  width: 30%;
+  width: 100%;
   line-height: 50px;
 }
 
-div .panel .ingredients
+div.panel
 {
+  float: left;
+  width: 600px;
+  height: 280px;
+}
+
+div.panel.glossary
+{
+  float: left;
+  width: 600px;
   height: 100px;
+}
+
+ul.left
+{
+  margin-left: 50px;
+}
+
+.prep-time
+{
+  margin-right: 10px;
+  background-color: #7F707D;
+  height: 50px;
+  width: 60px;
+  display: inline-block;
+  font-weight: bolder;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.prep-time-text
+{
+  margin-right: 10px;
+  height: 20px;
+  width: 60px;
+  display: inline-block;
+  font-weight: bolder;
+  font-size: 15px;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.panelingredients
+{
+  height: 20px;
+  float: none;
+  margin-left: 10px;
+}
+
+div.panelingredients a
+{
+  line-height: 20px;
+  font-size: 15px;
+  color: #203C40;
+}
+
+.ingredientscolumn
+{
+  background-color: #fffffc;
+  float: left;
+  min-width: 300px;
+}
+
+.ingredientscolumn h4
+{
+ display: inline-block;
+ margin-right: 30px;
+}
+
+div.recipestitle
+{
+ width: 600px;
+}
+
+.recipestitle h4
+{
+ font-family: 'Archivo Black', sans-serif;
+ display: inline-block;
+ margin-right: 30px;
+ font-size: 40px;
+}
+
+.keyingredient-text
+{
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #7A01FF;
+  height: 22px;
+  width: 95%;
+  display: inline-block;
+  font-weight: bolder;
+  color: white;
+  font-size: 15px;
+  text-align: left;
+  text-indent: 5px;
+  line-height: 22px;
+  border-radius: 10px;
+}
+
+.allingredient-text
+{
+  margin-right: 10px;
+  margin-bottom: 10px;
+  height: 22px;
+  width: 95%;
+  display: inline-block;
+  font-weight: bolder;
+  font-size: 15px;
+  text-align: left;
+  text-indent: 5px;
+  line-height: 22px;
+}
+
+.minutes-text
+{
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 90%;
+  font-weight: bolder;
+  font-size: 15px;
+  line-height: 22px;
+  color: #2A4039;
+}
+
+.ingredientslist
+{
+  float: left;
+}
+
+.row img
+{
+  display: inline-block;
+  float: right;
+  border-radius: 10px;
+  vertical-align: top;
+}
+
+.panel img
+{
+  width: 280px;
+}
+
+.singlerecipeimg
+{
+  width: 280px;
+  float: right;
+}
+
+.excerpt
+{
+  width: 230px;
+  display: inline-block;
+}
+
+.excerpt a
+{
+ float: right;
+}
+
+h5.h5link
+{
+  font-size: 15px;
+  color: #2EFFA7;
+  float: right;
+  line-height: 30px;
+}
+
+.panel.wholerecipe
+{
+  height: auto;
+}
+
+.formbutton
+{
+  margin-left: 50px;
+}
+
+.formbutton input
+{
+  height: 30px;
+  width: 130px;
+  border-radius: 10px;
+  margin-top: 20px;
+  background-color: #26BF83;
+  color: white  ;
+}
+
+select#item_ingredient_id
+{
+  width: 150px;
+  height: 30px;
+  float: left;
+  display: inline-block;
+  margin-left: 50px;
+}
+
+input#item_quantity
+{
+  margin-left: 50px;
   width: 150px;
 }
 
-.new-width .four .mobile-four .columns
+div.video
 {
+  border-radius: 10px;
+  float: right;
+}
 
+div.glossarydescription
+{
+  width: 250px;
+  display: inline-block;
+  margin-left: 0;
+}
+
+.homepageimagesmall
+{
+  float: right;
+}
+
+h5.subheader.narrow
+{
+  display: inline-block;
+  width: 500px;
+  float: left;
+  margin-left: -300px;
 }

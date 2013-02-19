@@ -6,7 +6,7 @@
       <div class="row">
         <div class="twelve columns show-for-small">
 
-          <img src="http://placehold.it/1200x700&text=Mobile Header">
+          <img src="/assets/Cheesecake-mobile.jpg">
 
         </div>
       </div><br>
@@ -21,34 +21,43 @@
     <!-- Shows -->
 
                <div class="four mobile-four columns">
-
-              <h4>View All Recipes</h4><hr/>
-              <% @recipes.each do |recipe| %>
-              <div class="panel">
-                <h5><%= link_to "#{recipe.title}", recipe_path(recipe.id) %></h5>
-
-
-                <h6 class="subheader">
-                  Prep Time: <%= recipe.preptime %>
-                  <br>Cooktime Time: <%= recipe.cooktime %>
-                  <br>Servings: <%= recipe.servings %>
-                  <br>Cost: <%= %>
-                </h6>
-
-                <h6><%= link_to 'Read More >>', recipe_path(recipe.id) %></h6>
-                <%= image_tag(recipe.image) %>
+                <div class='recipestitle'>
+              <h4>Recipes</h4>
+              <h5 class='h5link'><%= link_to '+ Recipe', new_recipe_path %></h5>
+              <hr/>
               </div>
 
-<% end %>
+
+              <% @recipes.each do |recipe| %>
+
+              <div class="panel">
+
+                <h5><%= link_to "#{recipe.title}", recipe_path(recipe.id) %></h5>
+
+                <%= image_tag(recipe.image) %>
+                <h6 class="subheader">
+                  <div class='prep-time-text'>Prep time</div>
+                  <div class='prep-time-text'>Cook time</div>
+                  <div class='prep-time-text'>Servings</div>
+                  <br>
+                  <div class='prep-time'><%= recipe.preptime %></div>
+                  <div class='prep-time'><%= recipe.cooktime %></div>
+                  <div class='prep-time'><%= recipe.servings %></div>
+                  <!-- <br>Cost:-->
+                </h6>
+                  <div class='excerpt'><%= recipe.instructions.truncate(200) %><%= link_to ' Read More >>', recipe_path(recipe.id) %></div>
+
+
+
+              </div>
+
+            <% end %>
             </div>
-
-
+<!--
               <h4>Select by key ingredient</h4><hr/>
               <% @recipes.each do |recipe| %>
                 <h5><%= link_to "#{recipe.key_ingredient}" %></h5>
-                <% end %>
-
-
+                <% end %> -->
 
             <div class="four mobile-two pull-two-mobile columns">
 
@@ -59,6 +68,3 @@
           </div>
         </div>
       </div>
-
-    <!-- End Content -->
-

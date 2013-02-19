@@ -1,5 +1,10 @@
+<%= form_for @items do |f| %>
 
+<%= @items.ingredient.name %>
 
+<%= f.label :quantity, :autofocus => 'autofocus' %>
+<%= f.text_field :quantity %>
 
-new item
+<%= f.submit %>
+<% end %>
 

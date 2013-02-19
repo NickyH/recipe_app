@@ -1,14 +1,41 @@
-
-              <h4><%= @tutorial.name %></h4><hr/>
-
-                <%= @tutorial.name %>
-                <%= @tutorial.description %>
-                <% videolink = "http://www.youtube.com/embed/#{@tutorial.video}" %>
-                <iframe width="210" height="157.5" src="<%= videolink %>" frameborder="0"></iframe>
+<div class="row">
+  <div class="twelve columns">
+    <div class="row">
+      <div class="twelve columns show-for-small">
+        <img src="/assets/cheesecake-mobile.jpg">
+      </div>
+    </div><br>
+    <div class="row">
+      <div class="twelve columns">
+        <div class="row">
+          <h4></h4><hr/>
+          <div class="four mobile-four columns showpanel">
+              <div class="panel wholerecipe">
+                <%= link_to '<< Back to glossary', tutorials_path %>
+                <h5></h5>
+                <h6 class="subheader">
+                <h4><%= @tutorial.name %></h4>
+                <hr/>
+                <div class='glossarydescription'><%= @tutorial.description %></div>
+                <div class='video'><% videolink = "http://www.youtube.com/embed/#{@tutorial.video}" %>
+                <iframe width="273" height="204.75" src="<%= videolink %>" frameborder="0"></iframe></div>
+                <br>
+                <br>
                 <%= link_to 'Delete', @tutorial, :method => :delete %>
                 <%= link_to 'Edit', edit_tutorial_path(@tutorial), :method => :get %>
               <div class="row">
                 <div class="one column">
 
                 </div>
+                </div>
+                <br>
+<!-- glossary function written in helper -->
+                  </div>
+</div>
 
+  <br>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>

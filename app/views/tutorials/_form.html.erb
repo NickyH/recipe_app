@@ -1,13 +1,13 @@
 <%= form_for @tutorial do |f| %>
 
-<%= f.label :name, "Tutorial Name", :autofocus => 'autofocus' %>
-<%= f.text_field :name %>
+<div class='form-input'><%= f.label :name, "Glossary word", :autofocus => 'autofocus' %></div>
+<div class='form-input'><%= f.text_field :name %></div>
 
-<%= f.label :description %>
-<%= f.text_field :description %>
+<div class='form-input'><%= f.label :description %></div>
+<div class='form-input'><%= f.text_field :description %></div>
 
-<%= f.label :video %>
-<%= f.text_field :video %>
-<%= f.submit %>
+<div class='form-input'><%= f.label :video, "YouTube Code (ie 'OxB7VRdnK5o')" %></div>
+<div class='form-input'><%= f.text_field :video %></div>
+<div class='formbutton'><%= f.submit %></div>
 <% end %>
 

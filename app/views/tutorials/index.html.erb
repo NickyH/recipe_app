@@ -6,13 +6,12 @@
       <div class="row">
         <div class="twelve columns show-for-small">
 
-          <img src="http://placehold.it/1200x700&text=Mobile Header">
+          <img src="/assets/Cheesecake-mobile.jpg">
 
         </div>
       </div><br>
 
     <!-- End Mobile Header -->
-
 
       <div class="row">
         <div class="twelve columns">
@@ -21,39 +20,29 @@
     <!-- Shows -->
 
                <div class="four mobile-four columns">
-
-              <h4>Tutorials</h4><hr/>
+              <div class='recipestitle'>
+              <h4>Tutorials</h4>
+              <h5 class='h5link'><%= link_to '+ Glossary term', new_tutorial_path %></h5>
+              <hr/>
+            </div>
               <% @tutorials.each do |tutorial| %>
-              <div class="panel">
+              <div class="panel glossary">
                 <h5><%= link_to "#{tutorial.name}", tutorial_path(tutorial) %></h5>
 
                 <h6 class="subheader">
-                  <%= tutorial.description.truncate(80) %>
+                  <%= tutorial.description.truncate(150) %>
                 </h6>
-
-                <h6><%= link_to 'Read More >>', tutorial_path(tutorial.id) %></h6>
               </div>
                 <% end %>
             </div>
 
     <!-- Image -->
-
             <div class="four mobile-two pull-two-mobile columns">
               <img src="/assets/tutorial.jpg" />
             </div>
-
   <!-- End Image -->
-
-
-    <!-- Feed -->
-
-
-
-    <!-- End Feed -->
 
           </div>
         </div>
       </div>
-
     <!-- End Content -->
-

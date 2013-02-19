@@ -6,9 +6,12 @@ class ItemsController < ApplicationController
     @item = Item.new
   end
   def create
+    item = Item.create(params[:item])
+    redirect_to(item.recipe)
   end
   def show
-    @items = Item.find(params[:id])
+    item = Item.create(params[:item])
+    redirect_to(item.recipe)
   end
   def edit
     @item = Item.find(params[:id])

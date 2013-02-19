@@ -5,7 +5,7 @@
       <div class="row">
         <div class="twelve columns show-for-small">
 
-          <img src="http://placehold.it/1200x700&text=Mobile Header">
+          <img src="/assets/Cheesecake-mobile.jpg">
 
         </div>
       </div><br>
@@ -15,18 +15,18 @@
           <div class="row">
 
                <div class="new-width four mobile-four columns ">
-
-              <h4>Ingredients</h4><hr/>
+            <div class='ingredientscolumn'>
+              <div class='recipestitle'>
+              <h4>Ingredients</h4>
+              <h5 class='h5link'><%= link_to '+ Ingredient', new_ingredient_path %></h5>
+              <hr/>
+            </div>
               <% @ingredients.each do |ingredient| %>
-              <div class="panel ingredients">
+              <div class="panelingredients">
                 <h5><%= link_to "#{ingredient.name}", ingredient_path(ingredient) %></h5>
-
-                <h6 class="subheader">
-                  <%= ingredient.name %>
-                </h6>
-
               </div>
                 <% end %>
+              </div>
             </div>
 
             <div class="four mobile-two pull-two-mobile columns">

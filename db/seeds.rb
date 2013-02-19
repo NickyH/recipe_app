@@ -33,15 +33,15 @@ i23 = Ingredient.create(:name => 'Strawberry compote', :units => 'ml', :cost_per
 i24 = Ingredient.create(:name => 'Strawberries', :units => 'grams', :cost_per_unit => '2.10')
 i25 = Ingredient.create(:name => 'Dessert wine', :units => 'ml', :cost_per_unit => '3.50')
 
-m1 = Tutorial.create(:name => 'Line the base', :description => "All you need is a pair of scissors. Take a large piece of baking paper and fold it in half, then fold it into quarters, then eighths. Cut a straight line through the paper, just inside the outer edge of the pan. Finally, unfold the paper and fit it inside the cake pan.", :video => 'OxB7VRdnK5o')
-m2 = Tutorial.create(:name => 'Bring to the boil', :description => "Boil is defined as heating liquid until bubbles break on the surface of the liquid. The right cookware is very important when boiling or cooking.", :video => 'kieGBkOdyMU')
-m3 = Tutorial.create(:name => 'Springform pan', :description => "The springform pan is a two-piece pan that not only has sides that can be removed but the bottom comes out too. There is a round base and an interlocking band, usually 2 to 3 inches high, that forms the sides, opening and closing with the flick of a latch.", :video => 'O_aJz1oIQLs')
-m4 = Tutorial.create(:name => 'Metal spoon', :description => "When folding ingredients through beaten eggwhites, a metal spoon is the best utensil as it cleanly cuts through the mixture without losing too much air.", :video => '')
+m1 = Tutorial.create(:name => 'Line', :description => "All you need is a pair of scissors. Take a large piece of baking paper and fold it in half, then fold it into quarters, then eighths. Cut a straight line through the paper, just inside the outer edge of the pan. Finally, unfold the paper and fit it inside the cake pan.", :video => 'OxB7VRdnK5o')
+m2 = Tutorial.create(:name => 'Boil', :description => "Boil is defined as heating liquid until bubbles break on the surface of the liquid. The right cookware is very important when boiling or cooking.", :video => 'kieGBkOdyMU')
+m3 = Tutorial.create(:name => 'Springform', :description => "The springform pan is a two-piece pan that not only has sides that can be removed but the bottom comes out too. There is a round base and an interlocking band, usually 2 to 3 inches high, that forms the sides, opening and closing with the flick of a latch.", :video => 'O_aJz1oIQLs')
+m4 = Tutorial.create(:name => 'Metal', :description => "When folding ingredients through beaten eggwhites, a metal spoon is the best utensil as it cleanly cuts through the mixture without losing too much air.", :video => '')
 m5 = Tutorial.create(:name => 'Gelatine', :description => "Soak sheets of gelatin in a bowl cold water for 5 to 10 minutes. Wring gently to remove excess water, than add to warm liquid, the quantity called for in the recipe, stirring until dissolved.", :video => '0kcmESxmVSw')
 # m6 = Tutorial.create(:name => '', :description => '', :video => '')
 
 
-r1.ingredients = [i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+r1.items = [i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
 
 r1.tutorials = [m3]
 r2.tutorials = [m3, m5]

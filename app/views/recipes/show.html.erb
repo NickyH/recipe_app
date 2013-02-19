@@ -2,70 +2,63 @@
   <div class="twelve columns">
     <div class="row">
       <div class="twelve columns show-for-small">
-        <img src="http://placehold.it/1200x700&text=Mobile Header">
+        <img src="/assets/cheesecake-mobile.jpg">
       </div>
     </div><br>
     <div class="row">
       <div class="twelve columns">
         <div class="row">
+          <h4></h4><hr/>
+          <div class='singlerecipeimg'><%= image_tag(@recipe.image) %></div>
           <div class="four mobile-four columns showpanel">
-            <h4></h4><hr/>
-              <div class="panel">
+              <div class="panel wholerecipe">
+                <%= link_to '<< Back to all recipes', recipes_path %>
                 <h5></h5>
                 <h6 class="subheader">
-                <h4><%= @recipe.title %></h4><hr/>
-                <%= @recipe.key_ingredient %>
+                <h4><%= @recipe.title %></h4>
+                <hr/>
+                <div class='keyingredient-text'><%= @recipe.key_ingredient %></div>
                 <br>
-                <%= @recipe.preptime %>
+                <div class='minutes-text'>
+                <%= @recipe.preptime %> minutes preparation time
                 <br>
-                <%= @recipe.cooktime %>
+                <%= @recipe.cooktime %> minutes cooking time
                 <br>
-
-                <% @tutorials.each do |tutorial| %>
-                <% string = @recipe.instructions %>
-                <% string.split(' ').map do |word| %>
-                    <% if word == 'base' %>
-                    <%= link_to "#{tutorial.name}", tutorial_path(tutorial.id) %>
-
-                  <% else %>
-                  <%= word %>
-                  <% end %>
-                  <% end %>
-                  <% end %>
-
-                <%= @recipe.instructions %>
-
-
+                Serves <%= @recipe.servings %>
+                </div>
                 <br>
-                <%= @recipe.servings %>
+<!-- glossary function written in helper -->
+
+                <%== show_recipe_instructions(@recipe.instructions, @tutorials) %>
+
+
                 <br>
                 <%= link_to 'Delete', @recipe, :method => :delete %>
                 <%= link_to 'Edit', edit_recipe_path(@recipe), :method => :get %>
                   <div class="row">
                     <div class="one column">
-                    <%= image_tag(@recipe.image) %>
+
                     </div>
-
-<% @recipe.ingredients.each do |ingredient| %>
-<br>
-
-<%= @recipe.items %>
-<% end %>
-
-<% Ingredient.order(:name).each do |ingredient| %>
-  <span><%= ingredient.name %></span>
-  <%= check_box_tag 'recipe[ingredient_ids][]', ingredient.id, ingredient.in?(@recipe.ingredients.to_a) %>
-<% end %>
+                  </div>
+</div>
+<div class="ingredientslist">
+            <h4></h4>
+<div class="panel">
+                <h5></h5>
+                <h6 class="subheader">
+                <h4>Ingredients</h4><hr/>
+                <div class='allingredient-text'>
+                <% @recipe.items.each do |i| %>
+                <br>
+                <%= "#{i.quantity.round} #{i.ingredient.units}, #{i.ingredient.name}" %>
+                <br>
+                <% end %>
+              </div>
+            </div>
+          </div>
 
   <br>
-
-
-
-
-
                   </div>
-              </div>
-              <div class="four mobile-two pull-two-mobile columns">
               </div>
             </div>
           </div>

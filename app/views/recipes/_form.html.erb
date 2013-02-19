@@ -19,14 +19,20 @@
 <div class='form-input'><%= f.label :servings %>
 <%= f.text_field :servings %></div>
 <br>
-<div class='form-input'><%= f.label :image %>
+<div class='form-input'><%= f.label :image, "Image URL" %>
 <%= f.text_field :image %></div>
 <br>
-<% Ingredient.order(:name).each do |ingredient| %>
-  <span><%= ingredient.name %></span>
-  <%= check_box_tag 'recipe[ingredient_ids][]', ingredient.id, ingredient.in?(@recipe.ingredients.to_a) %>
-<% end %>
-
-<%= f.submit %>
+<div class='formbutton'><%= f.submit %></div>
 <% end %>
 </div>
+<hr />
+<% if @item %>
+  <%= form_for @item do |f| %>
+    <%= f.hidden_field :recipe_id, :value => @recipe.id %>
+    <div class='form-input dropdown'><%= f.select :ingredient_id, Ingredient.order(:name).map{|ingredient| [ingredient.name, ingredient.id]} %>
+    <div class='form-input short'><%= f.label :quantity %></div>
+    <div class='form-inputshort'><%= f.text_field :quantity %></div>
+    <div class='form-input short'><%= f.label :units %></div>
+    <div class='formbutton'><%= f.submit %></div>
+  <% end %>
+<% end %>
